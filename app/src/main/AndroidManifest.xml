@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".section_share.Activity_Section_Share"
-            android:label="" >
+            android:label="Next U" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
