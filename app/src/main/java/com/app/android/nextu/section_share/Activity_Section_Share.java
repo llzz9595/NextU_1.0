@@ -52,7 +52,7 @@ public class Activity_Section_Share extends AppCompatActivity implements Materia
         ButterKnife.bind(this);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
         View guillotineMenu = LayoutInflater.from(this).
