@@ -27,6 +27,7 @@ public class Activity_Section_Share extends AppCompatActivity implements Materia
 
     MaterialTabHost tabHost;
 
+    //使用注解插件
     ViewPagerAdapter adapter;
     @Bind(R.id.toolbar)
     Toolbar toolbar;
