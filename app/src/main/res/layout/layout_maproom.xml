@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    >
+
+    <android.support.v7.widget.Toolbar
+        app="http://schemas.android.com/apk/res/com.example.toolbar"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="498dp">
+
+</View>
+    <View  android:layout_height="2px" android:background="@color/green"
+        android:layout_width="fill_parent"
+        android:layout_gravity="bottom"
+
+        ></View>
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#fefefe"
+        android:gravity="bottom"
+        android:clipChildren="false"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbtn_SmartPhone"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:button="@null"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/ic_smartphone_black_24dp44x44px"
+            android:layout_marginBottom="2dp" />
+
+
+        <RadioButton
+            android:id="@+id/rbtn_VideoCam"
+            android:layout_gravity="bottom"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:button="@null"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/ic_videocam_black_48dp_1" />
+
+        <RadioButton
+            android:id="@+id/rtbn_Extension"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:button="@null"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/ic_extension_black_48dp44x44px"
+            android:layout_marginBottom="2dp" />
+
+
+    </RadioGroup>
+</LinearLayout>
