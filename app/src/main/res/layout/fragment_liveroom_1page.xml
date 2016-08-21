@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-<ScrollView
+<com.app.android.nextu.widget.MyScrollView
 
     android:id="@+id/myScrollView"
     android:layout_width="match_parent"
@@ -43,27 +43,36 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginLeft="10dp">
+<ImageView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_huangguan"
+    android:layout_gravity="center_vertical"
 
+    android:layout_marginLeft="5dp"
+    android:layout_weight="1" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="热门直播"
             android:id="@+id/textView"
-            android:textSize="15sp"
+            android:textSize="15dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="9" />
 
         <Button
             android:background="#32b16c"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="30dp"
             android:id="@+id/btn_getAllLive"
             android:text="查看更多"
+            android:textSize="13dp"
             android:textColor="@color/white"
-            android:layout_marginLeft="200dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginRight="10dp" />
+            android:layout_weight="3"
+            android:layout_marginRight="15dp" />
     </LinearLayout>
 
 
@@ -75,9 +84,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        />
+     />
 
 
 </LinearLayout>
-</ScrollView>
+</com.app.android.nextu.widget.MyScrollView>
 </com.app.android.nextu.widget.MySwipeRefreshLayout>

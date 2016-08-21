@@ -1,13 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.app.android.nextu.widget.MyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    android:orientation="vertical" >
+    >
 
-    <Button android:id="@+id/fragment3_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="page3"
-        />
-</LinearLayout>  
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <FrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <com.app.android.nextu.widget.loopview.LoopViewPager
+                android:id="@+id/loopViewPager_3"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator_3"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+
+                />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_recomment"
+                android:layout_marginLeft="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热门推荐"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="查看更多"
+                android:textSize="13dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_recommed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+        <View  android:layout_height="20dp" android:background="@color/gray"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="10dp"></View>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_review"
+            android:layout_marginLeft="10dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="最新回顾"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="查看更多"
+            android:textSize="14dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_lastest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+
+        >
+
+
+    </android.support.v7.widget.RecyclerView>
+        <View  android:layout_height="25dp" android:background="@color/white"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="5dp"></View>
+    </LinearLayout>
+    </com.app.android.nextu.widget.MyScrollView>

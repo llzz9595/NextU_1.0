@@ -72,14 +72,16 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex-cache" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/cn.lankton/anyshape/2.0.0/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.akexorcist/RoundCornerProgressBar/2.0.3/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0-beta1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-beta1/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.0/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/design/24.0.0-beta1/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0-beta1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-beta1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-beta1/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.github.markushi/android-ui/1.2/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.mxn.soul/flowingdrawer-core/1.2.5/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/it.neokree/MaterialTabs/0.11/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/2.1.0/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/im.amomo.volley/okvolley/1.1.8/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/me.relex/circleindicator/1.2.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jacoco" />
@@ -100,20 +102,33 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="butterknife-7.0.1" level="project" />
     <orderEntry type="library" exported="" name="flowingdrawer-core-1.2.5" level="project" />
-    <orderEntry type="library" exported="" name="library-2.4.0" level="project" />
+    <orderEntry type="library" exported="" name="library-1.0.19" level="project" />
+    <orderEntry type="library" exported="" name="AMap_Search_V3.3.0_20160616" level="project" />
     <orderEntry type="library" exported="" name="okio-1.6.0" level="project" />
     <orderEntry type="library" exported="" name="picasso-2.5.2" level="project" />
     <orderEntry type="library" exported="" name="circleindicator-1.2.1" level="project" />
+    <orderEntry type="library" exported="" name="okhttp-2.6.0" level="project" />
+    <orderEntry type="library" exported="" name="3DMapV3_189(2)" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-24.0.0-beta1" level="project" />
-    <orderEntry type="library" exported="" name="recyclerview-v7-23.2.0" level="project" />
-    <orderEntry type="library" exported="" name="support-vector-drawable-24.0.0-beta1" level="project" />
     <orderEntry type="library" exported="" name="support-v4-24.0.0-beta1" level="project" />
-    <orderEntry type="library" exported="" name="okhttp-3.2.0" level="project" />
-    <orderEntry type="library" exported="" name="android-ui-1.2" level="project" />
+    <orderEntry type="library" exported="" name="systembartint-1.04" level="project" />
+    <orderEntry type="library" exported="" name="systembartint-1.0.4" level="project" />
     <orderEntry type="library" exported="" name="anyshape-2.0.0" level="project" />
+    <orderEntry type="library" exported="" name="design-24.0.0-beta1" level="project" />
+    <orderEntry type="library" exported="" name="library-2.4.0" level="project" />
+    <orderEntry type="library" exported="" name="AMap_2DMap_V2.9.0_20160525" level="project" />
+    <orderEntry type="library" exported="" name="recyclerview-v7-24.0.0-beta1" level="project" />
+    <orderEntry type="library" exported="" name="RoundCornerProgressBar-2.0.3" level="project" />
+    <orderEntry type="library" exported="" name="AMap_Location_V2.7.0_20160726" level="project" />
+    <orderEntry type="library" exported="" name="circleimageview-2.1.0" level="project" />
+    <orderEntry type="library" exported="" name="support-vector-drawable-24.0.0-beta1" level="project" />
+    <orderEntry type="library" exported="" name="okvolley-1.1.8" level="project" />
+    <orderEntry type="library" exported="" name="okhttp-3.2.0" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-24.0.0-beta1" level="project" />
     <orderEntry type="library" exported="" name="animated-vector-drawable-24.0.0-beta1" level="project" />
-    <orderEntry type="library" exported="" name="MaterialTabs-0.11" level="project" />
+    <orderEntry type="module" module-name="library3" exported="" />
+    <orderEntry type="module" module-name="library4" exported="" />
+    <orderEntry type="module" module-name="library2" exported="" />
     <orderEntry type="module" module-name="library" exported="" />
   </component>
 </module>

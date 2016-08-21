@@ -5,8 +5,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.app.android.nextu.section_share.liveroom.view.fragments.Fragment_LiveRoom_page1;
-import com.app.android.nextu.section_share.selfchannel.view.Fragment_VideoRoom_page3;
-import com.app.android.nextu.section_share.reviewroom.view.fragment.Fragment_VideoRoom_page2;
+import com.app.android.nextu.section_share.reviewroom.view.fragment.Fragment_VideoRoom_page3;
+import com.app.android.nextu.section_share.selfchannel.view.Fragment_VideoRoom_page2;
 
 /**
  *  滑动标题栏适配器

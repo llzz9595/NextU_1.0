@@ -4,13 +4,23 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
 
+
+
     defaultConfig {
         applicationId "com.app.android.nextu"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        aaptOptions {
+            additionalParameters "--no-version-vectors"
+        }
+        // Stops the Gradle plugin’s automatic rasterization of vectors
+//        generatedDensities = ['hdpi', 'xhdpi']  // 默认只生成 hdpi 和 xhdpi的png图
+
     }
+
+
     buildTypes {
         release {
             minifyEnabled false
@@ -21,15 +31,32 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+//    compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.android.support:appcompat-v7:24.0.0-beta1'
-    compile 'it.neokree:MaterialTabs:0.11'
+    compile 'com.android.support:design:24.0.0-beta1'
+//    compile 'it.neokree:MaterialTabs:0.11'
+
+
     compile files('libs/picasso-2.5.2.jar')
+    compile files('libs/systembartint-1.04.jar')
+    compile files('libs/AMap_Location_V2.7.0_20160726.jar')
+    compile 'im.amomo.volley:okvolley:1.1.8'
     compile 'com.squareup.okhttp3:okhttp:3.2.0'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'me.relex:circleindicator:1.2.1@aar'
     compile 'cn.lankton:anyshape:2.0.0'
     compile 'com.android.support:recyclerview-v7:23.2.0'
+
     compile 'com.mxn.soul:flowingdrawer-core:1.2.5'
     compile 'com.nineoldandroids:library:2.4.0'
     compile project(':librarys:library')
+    compile 'com.akexorcist:RoundCornerProgressBar:2.0.3'
+    compile project(':librarys:library2')
+    compile project(':librarys:library3')
+    compile project(':librarys:library4')
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+
+
+
+
 }

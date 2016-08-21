@@ -22,14 +22,16 @@ import cn.lankton.anyshape.AnyshapeImageView;
 /**
  * Created by SYSTEM on 2016/7/20.
  */
-public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.ViewHolder>
+public class RecycleViewAdapter
+        extends RecyclerView.Adapter<RecycleViewAdapter.ViewHolder>
 implements View.OnClickListener
 {
 
 
     private ArrayList<impl_LiveRoom_Model> users;
     private Context mContext;
-    public RecycleViewAdapter(ArrayList<impl_LiveRoom_Model> users){
+    public RecycleViewAdapter(ArrayList<impl_LiveRoom_Model> users)
+    {
         this.users = users;
     }
     private OnRecyclerViewItemClickListener mOnItemClickListener = null;
@@ -123,17 +125,11 @@ implements View.OnClickListener
 
         if( users == null)
             users = new ArrayList<impl_LiveRoom_Model>();
-//        ArrayList<impl_LiveRoom_Model> tempList = new ArrayList<impl_LiveRoom_Model>();
-//        for(impl_LiveRoom_Model s: users)
-//            tempList.add(s);
         users.clear();
-
-
         for(impl_LiveRoom_Model s : newUsers)
             users.add(s);
         Log.e("", "-----------------------" );
         this.notifyDataSetChanged();
-
 
     }
 }

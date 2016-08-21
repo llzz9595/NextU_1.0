@@ -2,4 +2,15 @@
     <string name="app_name">NextU</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="type">
+
+        <item>管理学</item>
+        <item>计算机</item>
+        <item>计算机网络</item>
+        <item>国际金融</item>
+        <item>会计学原理</item>
+        <item>统计学</item>
+        <item>其他</item>
+    </string-array>
 </resources>

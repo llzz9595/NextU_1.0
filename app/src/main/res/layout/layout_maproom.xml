@@ -4,6 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false"
     android:clipChildren="false"
     >
 
@@ -11,60 +13,85 @@
         app="http://schemas.android.com/apk/res/com.example.toolbar"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:background="@color/green"
         android:minHeight="?attr/actionBarSize"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+        app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/mapRoom_Titile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+           android:textColor="@color/white"
+            android:textSize="16dp"
+            />
+
+    </android.support.v7.widget.Toolbar>
 
 
-<View
+<!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="10">-->
+
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
     android:layout_width="match_parent"
-    android:layout_height="498dp">
+    android:layout_height="0dp"
+    android:layout_weight="11">
+    </com.amap.api.maps.MapView>
 
-</View>
+<!--</View>-->
     <View  android:layout_height="2px" android:background="@color/green"
         android:layout_width="fill_parent"
         android:layout_gravity="bottom"
 
         ></View>
-    <RadioGroup
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_alignParentBottom="true"
         android:background="#fefefe"
         android:gravity="bottom"
         android:clipChildren="false"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp">
 
         <RadioButton
-            android:id="@+id/rbtn_SmartPhone"
+            android:id="@+id/rbtn_maproom_SmartPhone"
             android:layout_width="0dp"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:button="@null"
             android:layout_weight="1"
-            android:drawableBottom="@drawable/ic_smartphone_black_24dp44x44px"
-            android:layout_marginBottom="2dp" />
+            android:drawableBottom="@drawable/ic_smartphone_black_24dp44x44pxdark"
+            android:layout_marginBottom="5dp" />
 
 
         <RadioButton
-            android:id="@+id/rbtn_VideoCam"
+            android:id="@+id/rbtn_Teach"
             android:layout_gravity="bottom"
             android:layout_width="0dp"
-            android:layout_height="80dp"
+            android:layout_height="match_parent"
             android:button="@null"
             android:layout_weight="1"
-            android:drawableBottom="@drawable/ic_videocam_black_48dp_1" />
+            android:drawableBottom="@drawable/ic_maproom_sendteach" />
 
         <RadioButton
-            android:id="@+id/rtbn_Extension"
+            android:id="@+id/rtbn_maproon_Extension"
             android:layout_width="0dp"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:button="@null"
             android:layout_weight="1"
-            android:drawableBottom="@drawable/ic_extension_black_48dp44x44px"
-            android:layout_marginBottom="2dp" />
+            android:drawableBottom="@drawable/ic_map"
+            android:layout_marginBottom="5dp" />
 
 
-    </RadioGroup>
+    </LinearLayout>
+
+
 </LinearLayout>

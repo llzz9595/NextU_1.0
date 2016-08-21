@@ -13,6 +13,9 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/librarys" />
             <option value="$PROJECT_DIR$/librarys/library" />
+            <option value="$PROJECT_DIR$/librarys/library2" />
+            <option value="$PROJECT_DIR$/librarys/library3" />
+            <option value="$PROJECT_DIR$/librarys/library4" />
           </set>
         </option>
       </GradleProjectSettings>

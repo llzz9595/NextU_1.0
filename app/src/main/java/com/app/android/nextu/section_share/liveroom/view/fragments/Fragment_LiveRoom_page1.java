@@ -66,19 +66,23 @@ public class Fragment_LiveRoom_page1 extends Fragment implements ILiveRoom_View 
 
         View view = inflater.inflate(R.layout.fragment_liveroom_1page, container, false);
         ButterKnife.bind(this, view);
+//        myScrollView.smoothScrollTo(0, 0);
         return view;
 
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        myScrollView.smoothScrollTo(0, 0);
+
         loopViewPager.setAdapter(new LoopViewPagerAdapter());
         indicator.setViewPager(loopViewPager);
 
         liveRoom_presenter = new Impl_LiveRoom_Presenter(this);
         //得到当前所有的房间
         liveRoom_presenter.getRooms();
+        myScrollView.smoothScrollTo(0, 0);
+
+
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         handler = new Handler(Looper.getMainLooper());
         swipeRefreshWidget.setProgressBackgroundColor(android.R.color.white);
@@ -122,6 +126,7 @@ public class Fragment_LiveRoom_page1 extends Fragment implements ILiveRoom_View 
     public void reflash(ArrayList<impl_LiveRoom_Model> users) {
           recycleViewAdapter.updateData(users);
     }
+
 
 
 }

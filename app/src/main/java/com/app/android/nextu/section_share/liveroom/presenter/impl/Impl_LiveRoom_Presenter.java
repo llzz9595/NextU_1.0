@@ -9,12 +9,13 @@ import com.app.android.nextu.section_share.liveroom.view.ILiveRoom_View;
 
 import java.util.ArrayList;
 
+
 /**
  * Created by SYSTEM on 2016/7/20.
  */
 public class Impl_LiveRoom_Presenter implements ILiveRoom_Presenter {
     private ILiveRoom_View liveRoomView;
-  private ArrayList<impl_LiveRoom_Model> users;
+    private ArrayList<impl_LiveRoom_Model> users;
     private Handler handler;
     public Impl_LiveRoom_Presenter(ILiveRoom_View liveRoomView)
     {

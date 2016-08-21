@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false"
     android:id="@+id/root"
     >
     <View
@@ -13,7 +14,6 @@
         android:background="#000000"
         />
     <LinearLayout
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -21,25 +21,26 @@
    >
 
     <android.support.v7.widget.Toolbar
-       app="http://schemas.android.com/apk/res/com.example.toolbar"
+
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:background="@color/green"
-        android:minHeight="?attr/actionBarSize"
+
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.ActionBar" >
+        app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:layout_weight="1">
 
 
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/search"
+            android:src="@drawable/ic_search"
             android:layout_gravity="right"
             android:id="@+id/btn_Search"
             android:background="@color/green"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="15dp"
             />
         <ImageView
             android:layout_width="wrap_content"
@@ -55,25 +56,31 @@
             android:layout_gravity="center"
             android:text="Next U"
             android:textColor ="#fff"
-            android:textSize="25sp"
+            android:textSize="25dp"
 
             />
     </android.support.v7.widget.Toolbar>
 
-    <it.neokree.materialtabs.MaterialTabHost
+    <!--<it.neokree.materialtabs.MaterialTabHost-->
+   <it.neokree.materialtabs.MaterialTabHost
         android:id="@+id/tabHost"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_below="@+id/toolbar"
+
         app:textColor="#32b16c"
-        app:primaryColor ="#ffffff"
-        app:accentColor="#32b16c"/>
+         app:materialTabsPrimaryColor="#ffffff"
+
+        app:accentColor="#32b16c"
+
+        />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:layout_below="@+id/tabHost" />
+        android:layout_height="0dp"
+        android:layout_below="@+id/tabHost"
+        android:layout_weight="10" />
 
 
         <View  android:layout_height="2px" android:background="@color/green"
@@ -81,41 +88,44 @@
 
             ></View>
         <RadioGroup
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_alignParentBottom="true"
             android:background="#fefefe"
             android:gravity="bottom"
             android:clipChildren="false"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp">
 
             <RadioButton
                 android:id="@+id/rbtn_SmartPhone"
                 android:layout_width="0dp"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:button="@null"
                 android:layout_weight="1"
                 android:drawableBottom="@drawable/ic_smartphone_black_24dp44x44px"
-                android:layout_marginBottom="2dp" />
+                android:layout_marginBottom="5dp" />
 
 
             <RadioButton
                 android:id="@+id/rbtn_VideoCam"
                 android:layout_gravity="bottom"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="match_parent"
                 android:button="@null"
                 android:layout_weight="1"
-                android:drawableBottom="@drawable/ic_videocam_black_48dp_1" />
+
+                android:drawableBottom="@drawable/ic_video" />
 
             <RadioButton
                android:id="@+id/rtbn_Extension"
                 android:layout_width="0dp"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:button="@null"
                 android:layout_weight="1"
-                android:drawableBottom="@drawable/ic_extension_black_48dp44x44px"
-                android:layout_marginBottom="2dp" />
+                android:drawableBottom="@drawable/ic_map_dark"
+                android:layout_marginBottom="5dp" />
 
 
         </RadioGroup>

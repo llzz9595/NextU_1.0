@@ -1,2 +1,5 @@
 include ':app'
 include 'librarys:library'
+include 'librarys:library2'
+include 'librarys:library3'
+include 'librarys:library4'
