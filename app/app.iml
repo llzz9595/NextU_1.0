@@ -106,6 +106,7 @@
     <orderEntry type="library" exported="" name="AMap_Search_V3.3.0_20160616" level="project" />
     <orderEntry type="library" exported="" name="okio-1.6.0" level="project" />
     <orderEntry type="library" exported="" name="picasso-2.5.2" level="project" />
+    <orderEntry type="library" exported="" name="gson-2.6.2" level="project" />
     <orderEntry type="library" exported="" name="circleindicator-1.2.1" level="project" />
     <orderEntry type="library" exported="" name="okhttp-2.6.0" level="project" />
     <orderEntry type="library" exported="" name="3DMapV3_189(2)" level="project" />
