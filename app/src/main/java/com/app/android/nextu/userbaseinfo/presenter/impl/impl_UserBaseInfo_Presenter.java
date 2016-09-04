@@ -120,30 +120,32 @@ public class impl_UserBaseInfo_Presenter implements IUserBaseInfo_Presenter {
         },0);
     }
 
+    private    UserBaseInfoModel user ;
     @Override
     public void getUserBaseInfo(String id) {
 
 
-
+        user = new UserBaseInfoModel();
+        user.getUserBaseInfo("01");
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                UserBaseInfoModel user = new UserBaseInfoModel();
-//                UserBaseInfoModel model = user.getUserBaseInfo(id);
-                UserBaseInfoModel model = new UserBaseInfoModel();
-                user.setUserName("黎教授");
-                user.setUserSex("男");
-                user.setUserLevel(9);
-                user.setUserNum_Focus(10);
-                user.setUserNum_Fans(10);
-                user.setUserNum_Cache(0);
-                user.setUserNum_Reservation(0);
-                user.setUserNum_Live(1);
-                user.setUserNum_Collection(0);
-                user.setUserNum_SelfChannel(0);
-                userBaseInfor_view.InitBaseInfo(user);
+//                UserBaseInfoModel user = new UserBaseInfoModel();
+                UserBaseInfoModel model = user.getModel();
+//                UserBaseInfoModel model = new UserBaseInfoModel();
+//                user.setUserName("黎教授");
+//                user.setUserSex("男");
+//                user.setUserLevel(9);
+//                user.setUserNum_Focus(10);
+//                user.setUserNum_Fans(10);
+//                user.setUserNum_Cache(0);
+//                user.setUserNum_Reservation(0);
+//                user.setUserNum_Live(1);
+//                user.setUserNum_Collection(0);
+//                user.setUserNum_SelfChannel(0);
+                userBaseInfor_view.InitBaseInfo(model);
 
             }
-        },0);
+        },1000);
     }
 }

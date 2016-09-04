@@ -14,6 +14,7 @@ import android.view.WindowManager;
 
 import com.app.android.nextu.R;
 import com.app.android.nextu.section_share.liveroom.presenter.adapter.LoopViewPagerAdapter;
+import com.app.android.nextu.section_share.selfchannel.model.SelfChannelModel;
 import com.app.android.nextu.section_share.selfchannel.presenter.Impl_SelfChannel_Presenter;
 import com.app.android.nextu.section_share.selfchannel.presenter.adapter.recycleview.RecycleViewAdapter;
 import com.app.android.nextu.util.Bag;
@@ -82,33 +83,35 @@ public class Fragment_VideoRoom_page2 extends Fragment implements ISelfChannel_V
     }
 
     @Override
-    public void initList(Bag[] bags) {
-        WindowManager manager_1 = this.getActivity().getWindowManager();
-        DisplayMetrics outMetrics = new DisplayMetrics();
-        manager_1.getDefaultDisplay().getMetrics(outMetrics);
-        int width = outMetrics.widthPixels;
+    public void initList(Bag<SelfChannelModel>[] bags) {
+
+if(bags != null) {
+    WindowManager manager_1 = this.getActivity().getWindowManager();
+    DisplayMetrics outMetrics = new DisplayMetrics();
+    manager_1.getDefaultDisplay().getMetrics(outMetrics);
+    int width = outMetrics.widthPixels;
 //        int height2 = outMetrics.heightPixels;
-        int distance_left = dip2px(this.getContext(),35);
+    int distance_left = dip2px(this.getContext(), 35);
 //        int distance_layoutWidth = dip2px(this.getContext(),150);
 //        int spacingInPixels = dip2px(this.getContext(),20);
-        int size = (int)((width - 2 * distance_left - dip2px(this.getContext(), 20))/2);
-        Log.d("", "间距：-------");
-        LinearLayoutManager manager = new LinearLayoutManager(this.getContext());
+    int size = (int) ((width - 2 * distance_left - dip2px(this.getContext(), 20)) / 2);
+    Log.d("", "间距：-------");
+    LinearLayoutManager manager = new LinearLayoutManager(this.getContext());
 
-        manager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        
-        recyviewCollage.setLayoutManager(manager);
+    manager.setOrientation(LinearLayoutManager.HORIZONTAL);
+
+    recyviewCollage.setLayoutManager(manager);
 
 //        recyviewCollage.addItemDecoration(new SpaceItemDecoration(spacingInPixels));
 
-        recyviewCollage.setAdapter(new RecycleViewAdapter(bags[0], size));
+    recyviewCollage.setAdapter(new RecycleViewAdapter(bags[0], size));
 
-        LinearLayoutManager manager2 = new LinearLayoutManager(this.getContext());
-        manager2.setOrientation(LinearLayoutManager.HORIZONTAL);
-        recyviewJob.setLayoutManager(manager2);
-        recyviewJob.setLayoutFrozen(true);
+    LinearLayoutManager manager2 = new LinearLayoutManager(this.getContext());
+    manager2.setOrientation(LinearLayoutManager.HORIZONTAL);
+    recyviewJob.setLayoutManager(manager2);
+    recyviewJob.setLayoutFrozen(true);
 //        recyviewJob.addItemDecoration(new SpaceItemDecoration(spacingInPixels));
-        recyviewJob.setAdapter(new RecycleViewAdapter(bags[1], size));
+    recyviewJob.setAdapter(new RecycleViewAdapter(bags[1], size));
 
         LinearLayoutManager manager3 = new LinearLayoutManager(this.getContext());
         manager3.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -152,7 +155,7 @@ public class Fragment_VideoRoom_page2 extends Fragment implements ISelfChannel_V
 //        recyviewMore.setLayoutFrozen(true);
 //        recyviewMore.addItemDecoration(new SpaceItemDecoration(spacingInPixels));
         recyviewMore.setAdapter(new RecycleViewAdapter(bags[7],size));
-
+}
     }
 
     public static int dip2px(Context context, float dipValue){

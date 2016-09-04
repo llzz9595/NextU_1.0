@@ -1,5 +1,17 @@
 package com.app.android.nextu.userbaseinfo.model;
 
+import android.os.AsyncTask;
+import android.util.Log;
+
+import com.app.android.nextu.section_share.liveroom.http.BaseUrl;
+import com.app.android.nextu.userbaseinfo.json.UserBaseInfo_JsonToJava;
+import com.app.android.nextu.util.CallBack;
+import com.app.android.nextu.util.StringParse;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+
+import org.json.JSONException;
+
 /**
  * Created by SYSTEM on 2016/7/31.
  */
@@ -17,8 +29,28 @@ public class UserBaseInfoModel {
     private  int userNum_Live;
     private int userNum_Collection;
     private  int userNum_SelfChannel;
+    // 暂时
+    private String url = BaseUrl.baseUrlForTomcat+"i/user/base?id=01";
 
     public UserBaseInfoModel() {
+    }
+
+
+    @Override
+    public String toString() {
+        return "UserBaseInfoModel{" +
+                "userPoster='" + userPoster + '\'' +
+                ", userName='" + userName + '\'' +
+                ", userSex='" + userSex + '\'' +
+                ", userLevel=" + userLevel +
+                ", userNum_Focus=" + userNum_Focus +
+                ", userNum_Fans=" + userNum_Fans +
+                ", userNum_Cache=" + userNum_Cache +
+                ", userNum_Reservation=" + userNum_Reservation +
+                ", userNum_Live=" + userNum_Live +
+                ", userNum_Collection=" + userNum_Collection +
+                ", userNum_SelfChannel=" + userNum_SelfChannel +
+                '}';
     }
 
     public String getUserPoster() {
@@ -111,8 +143,53 @@ public class UserBaseInfoModel {
 
     public UserBaseInfoModel getUserBaseInfo(String id)
     {
+
+        GetUserBaseInfo getUserBaseInfo = new GetUserBaseInfo();
+        getUserBaseInfo.execute(url);
         //通过id 查询
         return null;
 
     }
+    private  UserBaseInfoModel model;
+
+    public UserBaseInfoModel getModel() {
+        return model;
+    }
+
+    public void setModel(UserBaseInfoModel model) {
+        this.model = model;
+    }
+
+    String currentUrl;
+    private class GetUserBaseInfo extends AsyncTask<String,Void,String>
+    {
+        //        ArrayList<Impl_ReviewRoom_Model> list;
+        @Override
+        protected String doInBackground(String... params) {
+
+            OkHttpClient client = new OkHttpClient();
+//            String url = "http://192.168.0.102:8080/i/live/popular";
+            currentUrl = params[0];
+            Request resquest = new Request.Builder()
+                    .url(currentUrl)
+                    .build();
+            StringParse parser = new StringParse();
+            client.newCall(resquest).enqueue(new CallBack<String>(parser) {
+                @Override
+                public void onResponse(String s) throws JSONException {
+                    Log.e("", "Self---" + s);
+                    UserBaseInfo_JsonToJava userBaseInfo_jsonToJava = new UserBaseInfo_JsonToJava();
+
+                   UserBaseInfoModel model = userBaseInfo_jsonToJava.GetData(s);
+
+//                    setUsers(list);
+
+                setModel(model);
+                }
+            });
+            return null;
+        }
+    }
+
+
 }

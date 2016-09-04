@@ -9,6 +9,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -79,9 +80,9 @@ public class Fragment_LiveRoom_page1 extends Fragment implements ILiveRoom_View 
 
         liveRoom_presenter = new Impl_LiveRoom_Presenter(this);
         //得到当前所有的房间
-        liveRoom_presenter.getRooms();
-        myScrollView.smoothScrollTo(0, 0);
 
+        myScrollView.smoothScrollTo(0, 0);
+        liveRoom_presenter.getRoomsData();
 
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         handler = new Handler(Looper.getMainLooper());
@@ -113,13 +114,15 @@ public class Fragment_LiveRoom_page1 extends Fragment implements ILiveRoom_View 
     // 刷新 数据
     @Override
     public void init(ArrayList<impl_LiveRoom_Model> users) {
+        if(this.getContext()!= null){
         recycleViewAdapter = new RecycleViewAdapter(users);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
         recyclerView.setAdapter(recycleViewAdapter);
         recyclerView.addItemDecoration(new RecycleViewDivider(getContext(),
                 RecycleViewDivider.VERTICAL_LIST));
 
-
+        Log.e("","init");}
     }
 
     @Override

@@ -380,27 +380,28 @@ public class Activity_Section_Share extends AppCompatActivity
     @Override
     public void InitBaseInfo(UserBaseInfoModel user) {
 
-        // 测试 图
+        if(user != null) {
+            // 测试 图
 //        Picasso.with(this).load(R.drawable.example_4).into(imgHomeHead);;
-        imgHomeHead.setImageResource(R.drawable.example_4);
-        txtHomeName.setText(user.getUserName());
-        if(user.getUserSex().equals("男"))
-        Picasso.with(this).load(R.drawable.ic_gender_man).into(imgHomeSex);
-         else
-            Picasso.with(this).load(R.drawable.ic_gender_woman).into(imgHomeSex);
-        txtHomeLevel.setText("LV " + "" + user.getUserLevel());
-        progressHomeLevel.setProgress(user.getUserLevel()*10);
-        txtHomeFocus.setText("关注  " + user.getUserNum_Focus());
-        txtHomeFans.setText("粉丝  " + user.getUserNum_Fans());
-        // 未处理
-        txtHomeMessage.setText("消息  "+"0");
-        txtHomeNumCache.setText(""+user.getUserNum_Cache());
-        txtHomeNumReservation.setText(""+user.getUserNum_Reservation());
-        txtHomeNumLive.setText(""+user.getUserNum_Live());
-        txtHomeNumCollection.setText(""+user.getUserNum_Collection());
-        txtHomeNumSelfChannel.setText(""+user.getUserNum_SelfChannel());
+            imgHomeHead.setImageResource(R.drawable.example_4);
+            txtHomeName.setText(user.getUserName());
+            if (user.getUserSex().equals("男"))
+                Picasso.with(this).load(R.drawable.ic_gender_man).into(imgHomeSex);
+            else
+                Picasso.with(this).load(R.drawable.ic_gender_woman).into(imgHomeSex);
+            txtHomeLevel.setText("LV " + "" + user.getUserLevel());
+            progressHomeLevel.setProgress(user.getUserLevel() * 10);
+            txtHomeFocus.setText("关注  " + user.getUserNum_Focus());
+            txtHomeFans.setText("粉丝  " + user.getUserNum_Fans());
+            // 未处理
+            txtHomeMessage.setText("消息  " + "0");
+            txtHomeNumCache.setText("" + user.getUserNum_Cache());
+            txtHomeNumReservation.setText("" + user.getUserNum_Reservation());
+            txtHomeNumLive.setText("" + user.getUserNum_Live());
+            txtHomeNumCollection.setText("" + user.getUserNum_Collection());
+            txtHomeNumSelfChannel.setText("" + user.getUserNum_SelfChannel());
 
-
+        }
     }
 
 

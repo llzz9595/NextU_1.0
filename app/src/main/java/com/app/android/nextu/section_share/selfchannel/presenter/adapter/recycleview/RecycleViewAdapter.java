@@ -86,7 +86,7 @@ public class RecycleViewAdapter
 
 
 
-        Picasso.with(mContext).load(users.get(i).getSelfChannel_Poster())
+        Picasso.with(mContext).load(R.drawable.ic_example_6)
                 .resize(size,(int)(size*2/3))
                 .into(viewHolder.imgVideo2Poster);
 
@@ -107,7 +107,10 @@ public class RecycleViewAdapter
 
     @Override
     public int getItemCount() {
+        if(users != null)
         return users.size();
+        else
+            return 0;
     }
 
 

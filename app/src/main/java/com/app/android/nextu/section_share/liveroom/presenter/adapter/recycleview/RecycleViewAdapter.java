@@ -67,13 +67,13 @@ implements View.OnClickListener
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
 
-        viewHolder.txt_Count.setText(users.get(i).getUser_Count());
+        viewHolder.txt_Count.setText(users.get(i).getUser_Count()+"人在看");
         Picasso.with(mContext).load(R.drawable.example_5)
                 .resize(200,200)
                 .error(R.mipmap.ic_launcher).into(viewHolder.img_Head);
         viewHolder.txt_Name.setText(users.get(i).getUser_Name());
         viewHolder.img_Poster.setImageResource(R.drawable.example_4);
-        viewHolder.txt_Title.setText(users.get(i).getUser_Title());
+        viewHolder.txt_Title.setText("#"+users.get(i).getUser_Title());
         //将数据保存在itemView的Tag中，以便点击时进行获取
         viewHolder.itemView.setTag(users.get(i));
     }
@@ -82,7 +82,10 @@ implements View.OnClickListener
 
     @Override
     public int getItemCount() {
+        if(users != null)
         return users.size();
+        else
+            return 0;
     }
 
     //自定义的ViewHolder，持有每个Item的的所有界面元素

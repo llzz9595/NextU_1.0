@@ -1,5 +1,6 @@
 package com.app.android.nextu.section_share.selfchannel.view;
 
+import com.app.android.nextu.section_share.selfchannel.model.SelfChannelModel;
 import com.app.android.nextu.util.Bag;
 
 /**
@@ -7,5 +8,5 @@ import com.app.android.nextu.util.Bag;
  */
 public interface ISelfChannel_View {
 
-     void initList(Bag[] bag);
+     void initList(Bag<SelfChannelModel>[] bag);
 }

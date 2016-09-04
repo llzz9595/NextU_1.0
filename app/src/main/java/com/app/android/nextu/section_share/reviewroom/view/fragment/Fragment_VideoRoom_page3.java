@@ -70,22 +70,24 @@ public class Fragment_VideoRoom_page3 extends Fragment implements IReviewRoom_Vi
 
     @Override
     public void getPopularReview(ArrayList list) {
-        WindowManager manager_1 = this.getActivity().getWindowManager();
-        DisplayMetrics outMetrics = new DisplayMetrics();
-        manager_1.getDefaultDisplay().getMetrics(outMetrics);
-        int width = outMetrics.widthPixels;
-        int size = (int)(width/3);
+        if(this.getActivity().getWindowManager() != null) {
+            WindowManager manager_1 = this.getActivity().getWindowManager();
+            DisplayMetrics outMetrics = new DisplayMetrics();
+            manager_1.getDefaultDisplay().getMetrics(outMetrics);
+            int width = outMetrics.widthPixels;
+            int size = (int) (width / 3);
 
-        LinearLayoutManager manager = new LinearLayoutManager(this.getContext());
-        manager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerviewRecommed.setLayoutManager(manager);
-        recyclerviewRecommed.setAdapter(new Review_RecyclerAdapter(list,size));
-
+            LinearLayoutManager manager = new LinearLayoutManager(this.getContext());
+            manager.setOrientation(LinearLayoutManager.VERTICAL);
+            recyclerviewRecommed.setLayoutManager(manager);
+            recyclerviewRecommed.setAdapter(new Review_RecyclerAdapter(list, size));
+        }
     }
 
     @Override
     public void getLatestReview(ArrayList list) {
 
+        if(this.getActivity().getWindowManager() != null){
         WindowManager manager_1 = this.getActivity().getWindowManager();
         DisplayMetrics outMetrics = new DisplayMetrics();
         manager_1.getDefaultDisplay().getMetrics(outMetrics);
@@ -95,5 +97,5 @@ public class Fragment_VideoRoom_page3 extends Fragment implements IReviewRoom_Vi
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerviewLastest.setLayoutManager(manager);
         recyclerviewLastest.setAdapter(new Review_RecyclerAdapter(list,size));
-    }
+    }}
 }
