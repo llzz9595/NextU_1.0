@@ -5,6 +5,8 @@ package com.app.android.nextu.section_share.liveroom.http;
  */
 public class BaseUrl {
 
+// url
 
-    public static String baseUrlForTomcat = "http://192.168.31.141:8080/";
+    public static String baseUrlForTomcat = "http://120.27.34.163:8080/";
+    public static String baseUrlForNginx = "http://120.27.34.163/";
 }

@@ -25,14 +25,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-           android:textColor="@color/white"
+            android:textColor="@color/white"
             android:textSize="16dp"
             />
 
     </android.support.v7.widget.Toolbar>
 
 
-<!--<View-->
+    <!--<View-->
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="0dp"-->
     <!--android:layout_weight="10">-->
@@ -40,18 +40,65 @@
 
     <com.amap.api.maps.MapView
         android:id="@+id/map"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="11">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
     </com.amap.api.maps.MapView>
 
-<!--</View>-->
+    <!--</View>-->
     <View  android:layout_height="2px" android:background="@color/green"
         android:layout_width="fill_parent"
         android:layout_gravity="bottom"
 
         ></View>
-    <LinearLayout
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:background="#fefefe"-->
+    <!--android:gravity="bottom"-->
+    <!--android:clipChildren="false"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_weight="1"-->
+    <!-->-->
+
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rbtn_maproom_SmartPhone"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:button="@null"-->
+    <!--android:layout_weight="1"-->
+    <!--android:drawableBottom="@drawable/ic_smartphone_black_24dp44x44pxdark"-->
+    <!--android:layout_marginBottom="15dp" />-->
+
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rbtn_Teach"-->
+    <!--android:layout_gravity="bottom"-->
+    <!--android:layout_width="76dp"-->
+    <!--android:layout_height= "match_parent"-->
+    <!--android:layout_marginBottom="5dp"-->
+    <!--android:button="@null"-->
+
+
+
+    <!--android:drawableBottom="@drawable/ic_maproom_send" />-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rtbn_maproon_Extension"-->
+    <!--android:layout_width="0dp"-->
+
+    <!--android:layout_height="match_parent"-->
+    <!--android:button="@null"-->
+    <!--android:layout_weight="1"-->
+    <!--android:drawableBottom="@drawable/ic_map"-->
+    <!--android:layout_marginBottom="15dp"/>-->
+
+
+    <!--</LinearLayout>-->
+
+    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_alignParentBottom="true"
@@ -79,10 +126,11 @@
             android:layout_height="match_parent"
             android:button="@null"
             android:layout_weight="1"
-            android:drawableBottom="@drawable/ic_maproom_sendteach" />
+
+            android:drawableBottom="@drawable/ic_maproom_send" />
 
         <RadioButton
-            android:id="@+id/rtbn_maproon_Extension"
+            android:id="@+id/rtbn_maproom_Extension"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:button="@null"
@@ -91,7 +139,7 @@
             android:layout_marginBottom="5dp" />
 
 
-    </LinearLayout>
+    </RadioGroup>
 
 
 </LinearLayout>

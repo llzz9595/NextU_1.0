@@ -21,15 +21,15 @@
             android:src="@drawable/example3"
             android:layout_marginTop="20dp" />
 
-         <Button
-             android:background="@color/green"
-             android:layout_width="match_parent"
-             android:layout_height="25dp"
-             android:text="关注"
-             android:textSize="13dp"
-             android:textColor="#ffffff"
-             android:layout_gravity="center_horizontal"
-             android:layout_marginTop="5dp" />
+        <Button
+            android:background="@color/green"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="关注"
+            android:textSize="13dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="0dp"
@@ -37,84 +37,86 @@
         android:orientation="vertical"
         android:layout_marginLeft="10dp"
         android:layout_weight="4">
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="15dp">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="黄教授"
-            android:id="@+id/txt_Name"
-            android:layout_marginLeft="20dp"
-            android:textSize="14dp"
-            android:layout_weight="15" />
-        <TextView
-            android:layout_width="0dp"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="right"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="99999人在看"
-            android:id="@+id/txt_personsCount"
-            android:textSize="15dp"
-            android:layout_weight="10" />
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="黄教授"
+                android:id="@+id/txt_Name"
+                android:layout_marginLeft="20dp"
+                android:textSize="14dp"
+                android:layout_weight="15" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="99999人在看"
+                android:id="@+id/txt_personsCount"
+                android:textSize="15dp"
+                android:layout_weight="10" />
 
-    </LinearLayout>
+        </LinearLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="1">
-
-
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
-    >
-        <cn.lankton.anyshape.AnyshapeImageView
-            android:id="@+id/img_Poster"
-            android:layout_width="280dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/example_5"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
 
 
-            android:layout_marginRight="5dp"
-            android:layout_weight="0.69"
-            app:anyshapeMask =  "@drawable/mask2"
-            />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="#qjfdsdjglkdsjglkdj"
-        android:layout_gravity="center"
-        android:id="@+id/txt_Title"
-        android:textSize="15dp"
-        android:textColor="#ffffff"
-        android:gravity="center_vertical|center_horizontal" />
-</FrameLayout>
-    </LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="10dp">
+                >
+                <cn.lankton.anyshape.AnyshapeImageView
+                    android:id="@+id/img_Poster"
+                    android:layout_width="280dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/example_5"
 
-    <ImageButton
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:id="@+id/btn_share"
-        android:src="@drawable/ic_share"
-        android:background="#ffffff"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="bottom"
-        android:layout_weight="1"
-        android:layout_marginLeft="210dp" />
-</LinearLayout>
+
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.69"
+                    app:anyshapeMask =  "@drawable/mask2"
+                    />
+
+                <TextView
+                    android:background="@color/gray"
+                    android:alpha="0.8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#qjfdsdjglkdsjglkdj"
+                    android:layout_gravity="center"
+                    android:id="@+id/txt_Title"
+                    android:textSize="16dp"
+                    android:textColor="#000"
+                    android:gravity="center_vertical|center_horizontal" />
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btn_share"
+                android:src="@drawable/ic_share"
+                android:background="#ffffff"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:layout_marginLeft="210dp" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

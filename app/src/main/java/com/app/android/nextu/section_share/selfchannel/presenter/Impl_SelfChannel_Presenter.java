@@ -32,24 +32,24 @@ public class Impl_SelfChannel_Presenter implements  ISelfChannel_Presenter {
             @Override
             public void run() {
 
-
+//
 //                SelfChannelModel model = new SelfChannelModel();
-//                model.setSelfChannel_Poster(R.drawable.example_4);
+////                model.setSelfChannel_Poster(R.drawable.example_4);
 //                model.setSelfChannel_Title("今天打台风吗");
 //                model.setSelfChannel_Date("2016-8-01");
 //
 //                SelfChannelModel model2 = new SelfChannelModel();
-//                model2.setSelfChannel_Poster(R.drawable.ic_example_6);
+////                model2.setSelfChannel_Poster(R.drawable.ic_example_6);
 //                model2.setSelfChannel_Title("今天不打台风");
 //                model2.setSelfChannel_Date("2016-8-01");
 //                SelfChannelModel model3 = new SelfChannelModel();
-//                model3.setSelfChannel_Poster(R.drawable.example3);
+////                model3.setSelfChannel_Poster(R.drawable.example3);
 //                model3.setSelfChannel_Title("今天不打台风");
 //                model3.setSelfChannel_Date("2016-8-01");
-//
-//                bags = new Bag[8];
-//               for(int i = 0; i < 8; i++)
-//                   bags[i] = new Bag<SelfChannelModel>();
+
+                bags = new Bag[8];
+               for(int i = 0; i < 8; i++)
+                   bags[i] = new Bag<SelfChannelModel>();
 //                bags[0].add(model);
 //                bags[0].add(model2);
 //                bags[1].add(model3);

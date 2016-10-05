@@ -70,26 +70,16 @@ public class Impl_LiveRoom_Presenter implements ILiveRoom_Presenter {
 
     @Override
     public void getReflash() {
+        model = new impl_LiveRoom_Model();
+        model.getUserRooms();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-//
-                // 数据库得到编译好并处理好的json 数据 users
-                // 测试用
-                ArrayList<impl_LiveRoom_Model> users_2 = new ArrayList<impl_LiveRoom_Model>();
-                users_2.add(new impl_LiveRoom_Model
-                        ("99人在看", "headurl", "林教授",
-                                "posterurl", "企业：如何进行科学的管理"));
-                users_2.add(new impl_LiveRoom_Model
-                        ("22人在看", "headurl", "和教授",
-                                "posterurl", "学校：如何进行科学的管理"));
-                users_2.add(new impl_LiveRoom_Model
-                        ("11人在看", "headurl", "大教授",
-                                "posterurl", "家庭：如何进行科学的管理"));
-
-//             通知更新页面
-                liveRoomView.reflash(users_2);
+                users = model.getUsers();
+//                Log.e("", "users size --" + users.size());
+                liveRoomView.reflash(users);
             }
-        }, 0);
+        }, 1000);
+
     }
 }

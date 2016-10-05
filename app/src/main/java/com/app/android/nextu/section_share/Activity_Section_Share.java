@@ -24,6 +24,10 @@ import android.widget.TextView;
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
 import com.app.android.nextu.R;
 import com.app.android.nextu.section_date.Activity_Section_Date;
+import com.app.android.nextu.section_share.Activiry_Presenter.ActivityIPresenter;
+import com.app.android.nextu.section_share.Activiry_Presenter.impl.Impl_ActivityPresenter;
+import com.app.android.nextu.section_share.Activity_View.ActivityIView;
+import com.app.android.nextu.section_share.liveroom.http.BaseUrl;
 import com.app.android.nextu.section_share.liveroom.presenter.adapter.ViewPagerAdapter;
 import com.app.android.nextu.userbaseinfo.IUserBaseInfor_View;
 import com.app.android.nextu.userbaseinfo.model.UserBaseInfoModel;
@@ -53,7 +57,7 @@ import it.neokree.materialtabs.MaterialTabListener;
 //import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 public class Activity_Section_Share extends AppCompatActivity
-        implements MaterialTabListener, IUserBaseInfor_View {
+        implements MaterialTabListener, IUserBaseInfor_View,ActivityIView {
 
     MaterialTabHost tabHost;
 
@@ -88,12 +92,16 @@ public class Activity_Section_Share extends AppCompatActivity
     private  ImageView imgHomeSex;
 
     private  RoundCornerProgressBar progressHomeLevel;
+
+    private ActivityIPresenter activityIPresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_liveroom_firstpage);
         ButterKnife.bind(this);
 
+//        Activity对应Presenter 实例化
+        activityIPresenter = new Impl_ActivityPresenter(this);
 
 
         // 4.4及以上版本开启
@@ -323,7 +331,10 @@ public class Activity_Section_Share extends AppCompatActivity
     @OnClick({R.id.btn_Search, R.id.pager, R.id.rbtn_SmartPhone, R.id.rbtn_VideoCam, R.id.rtbn_Extension})
     public void onClick(View view) {
         switch (view.getId()) {
+//             启用搜索
             case R.id.btn_Search:
+
+                activityIPresenter.search("");
                 break;
             case R.id.pager:
                 break;
@@ -377,13 +388,14 @@ public class Activity_Section_Share extends AppCompatActivity
 
     }
 
+    private String baseUrl = BaseUrl.baseUrlForNginx;
     @Override
     public void InitBaseInfo(UserBaseInfoModel user) {
 
         if(user != null) {
             // 测试 图
 //        Picasso.with(this).load(R.drawable.example_4).into(imgHomeHead);;
-            imgHomeHead.setImageResource(R.drawable.example_4);
+            Picasso.with(this).load(baseUrl+user.getUserPoster()).into(imgHomeHead);
             txtHomeName.setText(user.getUserName());
             if (user.getUserSex().equals("男"))
                 Picasso.with(this).load(R.drawable.ic_gender_man).into(imgHomeSex);

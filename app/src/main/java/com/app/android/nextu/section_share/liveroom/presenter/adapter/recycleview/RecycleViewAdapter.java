@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.android.nextu.R;
+import com.app.android.nextu.section_share.liveroom.http.BaseUrl;
 import com.app.android.nextu.section_share.liveroom.model.impl_LiveRoom_Model;
 import com.squareup.picasso.Picasso;
 
@@ -35,7 +36,7 @@ implements View.OnClickListener
         this.users = users;
     }
     private OnRecyclerViewItemClickListener mOnItemClickListener = null;
-
+    private String baseUrl = BaseUrl.baseUrlForNginx;
 
 
     @Override
@@ -68,11 +69,13 @@ implements View.OnClickListener
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
 
         viewHolder.txt_Count.setText(users.get(i).getUser_Count()+"人在看");
-        Picasso.with(mContext).load(R.drawable.example_5)
+        Picasso.with(mContext).load(baseUrl+users.get(i).getUser_Image())
                 .resize(200,200)
                 .error(R.mipmap.ic_launcher).into(viewHolder.img_Head);
         viewHolder.txt_Name.setText(users.get(i).getUser_Name());
-        viewHolder.img_Poster.setImageResource(R.drawable.example_4);
+        Picasso.with(mContext).load(baseUrl+users.get(i).getUser_Poster())
+                .into(viewHolder.img_Poster);
+
         viewHolder.txt_Title.setText("#"+users.get(i).getUser_Title());
         //将数据保存在itemView的Tag中，以便点击时进行获取
         viewHolder.itemView.setTag(users.get(i));

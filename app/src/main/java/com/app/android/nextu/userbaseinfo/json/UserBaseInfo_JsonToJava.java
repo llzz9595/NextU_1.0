@@ -17,6 +17,7 @@ public class UserBaseInfo_JsonToJava {
     public UserBaseInfoModel GetData(String s)
     {
 
+        //gson解析
        UserBaseInfoModel model = new UserBaseInfoModel();
         Gson gson = new Gson();
         model = gson.fromJson(s,UserBaseInfoModel.class);

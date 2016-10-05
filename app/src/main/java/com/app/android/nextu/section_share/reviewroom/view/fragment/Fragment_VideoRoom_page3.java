@@ -70,7 +70,7 @@ public class Fragment_VideoRoom_page3 extends Fragment implements IReviewRoom_Vi
 
     @Override
     public void getPopularReview(ArrayList list) {
-        if(this.getActivity().getWindowManager() != null) {
+        if(this.getActivity() != null) {
             WindowManager manager_1 = this.getActivity().getWindowManager();
             DisplayMetrics outMetrics = new DisplayMetrics();
             manager_1.getDefaultDisplay().getMetrics(outMetrics);
@@ -87,7 +87,7 @@ public class Fragment_VideoRoom_page3 extends Fragment implements IReviewRoom_Vi
     @Override
     public void getLatestReview(ArrayList list) {
 
-        if(this.getActivity().getWindowManager() != null){
+        if(this.getActivity()!= null){
         WindowManager manager_1 = this.getActivity().getWindowManager();
         DisplayMetrics outMetrics = new DisplayMetrics();
         manager_1.getDefaultDisplay().getMetrics(outMetrics);

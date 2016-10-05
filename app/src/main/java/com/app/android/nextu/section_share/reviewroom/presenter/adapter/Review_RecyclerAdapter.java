@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.app.android.nextu.R;
+import com.app.android.nextu.section_share.liveroom.http.BaseUrl;
 import com.app.android.nextu.section_share.reviewroom.model.Impl_ReviewRoom_Model;
 import com.squareup.picasso.Picasso;
 
@@ -27,7 +28,7 @@ public class Review_RecyclerAdapter extends
     private OnRecyclerViewItemClickListener mOnItemClickListener = null;
     private ArrayList<Impl_ReviewRoom_Model> models;
     private int size;
-
+    private String baseUrl = BaseUrl.baseUrlForNginx;
     public Review_RecyclerAdapter(ArrayList<Impl_ReviewRoom_Model> models,int size) {
         this.models = models;
 
@@ -47,7 +48,7 @@ public class Review_RecyclerAdapter extends
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        Picasso.with(mContext).load(R.drawable.ic_example_6)
+        Picasso.with(mContext).load(baseUrl+models.get(position).getReviewRoom_Poster())
                 .resize(size,(int)(size*2/3))
                 .into(holder.imgVideo3Poster);
         holder.txtVideo3Title
@@ -64,7 +65,10 @@ public class Review_RecyclerAdapter extends
 
     @Override
     public int getItemCount() {
+        if(models != null)
+
         return models.size();
+        else return 0;
     }
 
     @Override

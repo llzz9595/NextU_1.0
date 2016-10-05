@@ -22,6 +22,7 @@ import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
+
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.CameraUpdateFactory;
 import com.amap.api.maps.LocationSource;
@@ -74,7 +75,7 @@ public class Activity_Section_Date extends AppCompatActivity
     RadioButton rbtnSmartPhone;
     @Bind(R.id.rbtn_Teach)
     RadioButton rbtnTeach;
-    @Bind(R.id.rtbn_maproon_Extension)
+    @Bind(R.id.rtbn_maproom_Extension)
     RadioButton rtbnExtension;
     //    @Bind(R.id.img_MapRoom_Location_Point)
     AnyshapeImageView imgMapRoomLocationPoint;
@@ -341,7 +342,7 @@ public class Activity_Section_Date extends AppCompatActivity
         win.setAttributes(winParams);
     }
 
-    @OnClick({R.id.rbtn_maproom_SmartPhone, R.id.rbtn_Teach, R.id.rtbn_maproon_Extension})
+    @OnClick({R.id.rbtn_maproom_SmartPhone, R.id.rbtn_Teach, R.id.rtbn_maproom_Extension})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.rbtn_maproom_SmartPhone:
@@ -380,7 +381,7 @@ public class Activity_Section_Date extends AppCompatActivity
 
                 }
 
-            case R.id.rtbn_maproon_Extension:
+            case R.id.rtbn_maproom_Extension:
                 break;
         }
     }

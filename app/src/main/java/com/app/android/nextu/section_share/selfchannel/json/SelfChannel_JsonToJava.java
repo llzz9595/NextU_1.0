@@ -20,7 +20,7 @@ public class SelfChannel_JsonToJava {
     public Bag<SelfChannelModel>[] GetData(String s)
     {
 
-        Bag<SelfChannelModel>[] bags = (Bag<SelfChannelModel>[])new Bag[2];
+        Bag<SelfChannelModel>[] bags = (Bag<SelfChannelModel>[])new Bag[8];
         for(int i =0 ; i < bags.length; i++)
            bags[i] = new Bag<SelfChannelModel>();
 
@@ -28,7 +28,7 @@ public class SelfChannel_JsonToJava {
         Log.e("", "list result------9090" + s);
         try {
             JSONArray jsonArray = new JSONArray(s);
-            for(int i=0;i<2;i++) {
+            for(int i=0;i<8;i++) {
                 Log.e("","///////"+i);
                 JSONArray obj1 = jsonArray.getJSONArray(i);
 //                Log.e("", "list result------8090" + obj1);

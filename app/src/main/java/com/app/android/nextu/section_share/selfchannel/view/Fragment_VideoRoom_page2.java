@@ -85,7 +85,7 @@ public class Fragment_VideoRoom_page2 extends Fragment implements ISelfChannel_V
     @Override
     public void initList(Bag<SelfChannelModel>[] bags) {
 
-if(bags != null) {
+if(bags != null && this.getActivity()!= null) {
     WindowManager manager_1 = this.getActivity().getWindowManager();
     DisplayMetrics outMetrics = new DisplayMetrics();
     manager_1.getDefaultDisplay().getMetrics(outMetrics);

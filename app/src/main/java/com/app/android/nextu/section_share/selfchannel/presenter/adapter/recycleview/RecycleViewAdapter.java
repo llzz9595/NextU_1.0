@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.app.android.nextu.R;
+import com.app.android.nextu.section_share.liveroom.http.BaseUrl;
 import com.app.android.nextu.section_share.liveroom.model.impl_LiveRoom_Model;
 import com.app.android.nextu.section_share.selfchannel.model.SelfChannelModel;
 import com.app.android.nextu.util.Bag;
@@ -43,7 +44,7 @@ public class RecycleViewAdapter
     private OnRecyclerViewItemClickListener mOnItemClickListener = null;
        private Bag<SelfChannelModel> bag;
     private ArrayList<SelfChannelModel> users;
-
+    private String baseUrl = BaseUrl.baseUrlForNginx;
     private  int size ;
     public RecycleViewAdapter(Bag<SelfChannelModel> bag,int size) {
         this.bag = bag;
@@ -86,8 +87,8 @@ public class RecycleViewAdapter
 
 
 
-        Picasso.with(mContext).load(R.drawable.ic_example_6)
-                .resize(size,(int)(size*2/3))
+        Picasso.with(mContext).load(baseUrl+ users.get(i).getSelfChannel_Poster())
+                .resize(size, (int) (size * 2 / 3))
                 .into(viewHolder.imgVideo2Poster);
 
         viewHolder.txtVideo2Title.setText(users.get(i).getSelfChannel_Title());
